@@ -33,7 +33,6 @@ const requestHandler = (req, res) => {
     
     if(url == '/create-user' && method === 'POST'){
         //When we use this we receive the data sent via POST as key-value pairs
-        //using the names of the html.
         req.on('data', (chunk) => { 
             let username = chunk.toString();
             username = username.split('=')[1];
